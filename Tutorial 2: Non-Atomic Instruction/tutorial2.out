@@ -1,0 +1,310 @@
+@!@!@STARTMSG 2262:0 @!@!@
+TLC2 Version 2.16 of 31 December 2020 (rev: cdddf55)
+@!@!@ENDMSG 2262 @!@!@
+@!@!@STARTMSG 2187:0 @!@!@
+Running breadth-first search Model-Checking with fp 7 and seed 4262331134295150228 with 1 worker on 8 cores with 3460MB heap and 64MB offheap memory [pid: 3771391] (Linux 5.14.0-70.22.1.el9_0.x86_64 amd64, Red Hat, Inc. 17.0.4 x86_64, MSBDiskFPSet, DiskStateQueue).
+@!@!@ENDMSG 2187 @!@!@
+@!@!@STARTMSG 2220:0 @!@!@
+Starting SANY...
+@!@!@ENDMSG 2220 @!@!@
+Parsing file /home/rhel/PSET/TLA/LearnTLA/Tutorial 2: Non-Atomic Instruction/tutorial2.tla
+Warning: symbols were renamed.
+Parsing file /tmp/Naturals.tla
+Parsing file /tmp/TLC.tla
+Parsing file /tmp/Sequences.tla
+Parsing file /tmp/FiniteSets.tla
+Semantic processing of module Naturals
+Semantic processing of module Sequences
+Semantic processing of module FiniteSets
+Semantic processing of module TLC
+Semantic processing of module tutorial2
+@!@!@STARTMSG 2219:0 @!@!@
+SANY finished.
+@!@!@ENDMSG 2219 @!@!@
+@!@!@STARTMSG 2185:0 @!@!@
+Starting... (2023-03-13 00:16:25)
+@!@!@ENDMSG 2185 @!@!@
+@!@!@STARTMSG 2189:0 @!@!@
+Computing initial states...
+@!@!@ENDMSG 2189 @!@!@
+@!@!@STARTMSG 2190:0 @!@!@
+Finished computing initial states: 1 distinct state generated at 2023-03-13 00:16:26.
+@!@!@ENDMSG 2190 @!@!@
+@!@!@STARTMSG 2110:1 @!@!@
+Invariant DeadlockCondition is violated.
+@!@!@ENDMSG 2110 @!@!@
+@!@!@STARTMSG 2121:1 @!@!@
+The behavior up to this point is:
+@!@!@ENDMSG 2121 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+1: <Initial predicate>
+/\ temp = defaultInitValue
+/\ a = 0
+/\ critical_section = 0
+/\ pc = (0 :> "L1_" @@ 1 :> "L1")
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+2: <L1_ line 49, col 8 to line 52, col 45 of module tutorial2>
+/\ temp = 1
+/\ a = 0
+/\ critical_section = 0
+/\ pc = (0 :> "L2_" @@ 1 :> "L1")
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+3: <L1 line 74, col 7 to line 77, col 44 of module tutorial2>
+/\ temp = 1
+/\ a = 0
+/\ critical_section = 0
+/\ pc = (0 :> "L2_" @@ 1 :> "L2")
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+4: <L2_ line 54, col 8 to line 57, col 48 of module tutorial2>
+/\ temp = 1
+/\ a = 1
+/\ critical_section = 0
+/\ pc = (0 :> "L3_" @@ 1 :> "L2")
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+5: <L3_ line 59, col 8 to line 65, col 33 of module tutorial2>
+/\ temp = 1
+/\ a = 1
+/\ critical_section = 1
+/\ pc = (0 :> "L4_" @@ 1 :> "L2")
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+6: <L2 line 79, col 7 to line 82, col 47 of module tutorial2>
+/\ temp = 1
+/\ a = 1
+/\ critical_section = 1
+/\ pc = (0 :> "L4_" @@ 1 :> "L3")
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+7: <L3 line 84, col 7 to line 90, col 32 of module tutorial2>
+/\ temp = 1
+/\ a = 1
+/\ critical_section = 2
+/\ pc = (0 :> "L4_" @@ 1 :> "L4")
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2201:0 @!@!@
+The coverage statistics at 2023-03-13 00:16:26
+@!@!@ENDMSG 2201 @!@!@
+@!@!@STARTMSG 2773:0 @!@!@
+<Init line 42, col 1 to line 42, col 4 of module tutorial2>: 2:2
+@!@!@ENDMSG 2773 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 43, col 9 to line 47, col 60 of module tutorial2: 2
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<L1_ line 49, col 1 to line 49, col 3 of module tutorial2>: 2:6
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 49, col 11 to line 49, col 23 of module tutorial2: 38
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 49, col 11 to line 49, col 15 of module tutorial2: 32
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 50, col 11 to line 50, col 23 of module tutorial2: 6
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 51, col 11 to line 51, col 40 of module tutorial2: 6
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 52, col 11 to line 52, col 45 of module tutorial2: 6
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<L2_ line 54, col 1 to line 54, col 3 of module tutorial2>: 3:8
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 54, col 11 to line 54, col 23 of module tutorial2: 39
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 54, col 11 to line 54, col 15 of module tutorial2: 31
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 55, col 11 to line 55, col 19 of module tutorial2: 8
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 56, col 11 to line 56, col 40 of module tutorial2: 8
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 57, col 11 to line 57, col 48 of module tutorial2: 8
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<L3_ line 59, col 1 to line 59, col 3 of module tutorial2>: 3:7
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 59, col 11 to line 59, col 23 of module tutorial2: 37
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 59, col 11 to line 59, col 15 of module tutorial2: 30
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 60, col 14 to line 60, col 18 of module tutorial2: 7
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 61, col 19 to line 62, col 51 of module tutorial2: 5
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 63, col 22 to line 63, col 52 of module tutorial2: 2
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 64, col 22 to line 64, col 47 of module tutorial2: 2
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 65, col 11 to line 65, col 33 of module tutorial2: 7
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<L4_ line 67, col 1 to line 67, col 3 of module tutorial2>: 2:7
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 67, col 11 to line 67, col 23 of module tutorial2: 36
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 67, col 11 to line 67, col 15 of module tutorial2: 29
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 68, col 11 to line 68, col 50 of module tutorial2: 7
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 69, col 11 to line 69, col 41 of module tutorial2: 7
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 70, col 11 to line 70, col 33 of module tutorial2: 7
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<L1 line 74, col 1 to line 74, col 2 of module tutorial2>: 5:6
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 74, col 10 to line 74, col 21 of module tutorial2: 35
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 74, col 10 to line 74, col 14 of module tutorial2: 29
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 75, col 10 to line 75, col 22 of module tutorial2: 6
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 76, col 10 to line 76, col 38 of module tutorial2: 6
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 77, col 10 to line 77, col 44 of module tutorial2: 6
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<L2 line 79, col 1 to line 79, col 2 of module tutorial2>: 7:9
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 79, col 10 to line 79, col 21 of module tutorial2: 37
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 79, col 10 to line 79, col 14 of module tutorial2: 28
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 80, col 10 to line 80, col 18 of module tutorial2: 9
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 81, col 10 to line 81, col 38 of module tutorial2: 9
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 82, col 10 to line 82, col 47 of module tutorial2: 9
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<L3 line 84, col 1 to line 84, col 2 of module tutorial2>: 8:9
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 84, col 10 to line 84, col 21 of module tutorial2: 35
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 84, col 10 to line 84, col 14 of module tutorial2: 27
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 85, col 13 to line 85, col 17 of module tutorial2: 9
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 86, col 21 to line 86, col 60 of module tutorial2: 5
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 86, col 41 to line 86, col 60 of module tutorial2: 6
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 87, col 21 to line 87, col 49 of module tutorial2: 5
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 87, col 27 to line 87, col 49 of module tutorial2: 6
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 88, col 21 to line 88, col 51 of module tutorial2: 3
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 89, col 21 to line 89, col 46 of module tutorial2: 3
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 90, col 10 to line 90, col 32 of module tutorial2: 8
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<L4 line 92, col 1 to line 92, col 2 of module tutorial2>: 3:3
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 92, col 10 to line 92, col 21 of module tutorial2: 28
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 92, col 10 to line 92, col 14 of module tutorial2: 25
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 93, col 10 to line 93, col 49 of module tutorial2: 3
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 94, col 10 to line 94, col 40 of module tutorial2: 3
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 95, col 10 to line 95, col 32 of module tutorial2: 3
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<Terminating line 100, col 1 to line 100, col 11 of module tutorial2>: 0:0
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 100, col 40 to line 100, col 56 of module tutorial2: 29
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 100, col 31 to line 100, col 37 of module tutorial2: 25
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 101, col 19 to line 101, col 32 of module tutorial2: 0
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2774:0 @!@!@
+<DeadlockCondition line 111, col 1 to line 111, col 17 of module tutorial2>
+@!@!@ENDMSG 2774 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 111, col 22 to line 111, col 66 of module tutorial2: 34
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 111, col 22 to line 111, col 41 of module tutorial2: 34
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 111, col 46 to line 111, col 66 of module tutorial2: 33
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2202:0 @!@!@
+End of statistics.
+@!@!@ENDMSG 2202 @!@!@
+@!@!@STARTMSG 2200:0 @!@!@
+Progress(7) at 2023-03-13 00:16:26: 47 states generated (4,692 s/min), 34 distinct states found (3,394 ds/min), 7 states left on queue.
+@!@!@ENDMSG 2200 @!@!@
+@!@!@STARTMSG 2199:0 @!@!@
+47 states generated, 34 distinct states found, 7 states left on queue.
+@!@!@ENDMSG 2199 @!@!@
+@!@!@STARTMSG 2194:0 @!@!@
+The depth of the complete state graph search is 7.
+@!@!@ENDMSG 2194 @!@!@
+@!@!@STARTMSG 2268:0 @!@!@
+The average outdegree of the complete state graph is 1 (minimum is 0, the maximum 2 and the 95th percentile is 2).
+@!@!@ENDMSG 2268 @!@!@
+@!@!@STARTMSG 2186:0 @!@!@
+Finished in 609ms at (2023-03-13 00:16:26)
+@!@!@ENDMSG 2186 @!@!@
