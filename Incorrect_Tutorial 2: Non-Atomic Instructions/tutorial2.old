@@ -1,0 +1,30 @@
+------------------------------ MODULE tutorial2 ------------------------------- 
+\* Below we show an example of bad specification,
+EXTENDS Naturals, TLC
+(*--algorithm prog 
+variables 
+    a = 0; 
+    critical_section = 0;
+
+process Left=0
+begin
+    L1: a := a + 1; \* <--- This is Bad 
+    L2: if a = 1 then 
+        critical_section := critical_section + 1;
+        L3: critical_section := critical_section - 1;
+    end if
+end process
+
+process Right=1
+begin
+    L1: a := a + 1; \* <--- This is Bad
+    L2: if a = 1 then 
+        critical_section := critical_section + 1;
+        L3: critical_section := critical_section - 1;
+    end if
+end process
+
+end algorithm;*)
+DeadlockCondition == critical_section < 2 /\ critical_section >= 0
+=============================================================================
+
